@@ -1,5 +1,15 @@
-var gulp = require('gulp');
+const gulp = require('gulp');
 
-gulp.task('default', function() {
-  console.log('Hello Gulp!');
+const paths = {
+  dist: './dist/',
+  entry: './index.js',
+  src: [
+    'src/**/*.js'
+  ],
+};
+
+gulp.task('hello', function(){
+	console.log('Hello Gulp!');
 });
+
+gulp.task('default', ['hello']);
