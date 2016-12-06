@@ -1,0 +1,47 @@
+Donwload and install Node.js
+npm to create the package.json
+
+----------
+
+Install gulp at the project: npm install gulp@3.9.0 --save-dev
+without @3.9.0 it will download the last version
+--save-dev = development dependency, only exists at dev environment, will be added at devDependecies
+--save = will be added at dependecies
+
+npm install will install all the dependencies
+
+----------
+
+if you call gulp from the command line it will not execute, because the binary in inside node_modules
+you can install gulp in a global mode, but a better way is to add a script tag at your package.json pointing to gulp
+"scripts": {
+    "gulp": "gulp"
+}
+
+and run with: npm run gulp
+
+----------
+
+You must create a gulpfile.js at your projects's root folder and import gulp
+var gulp = require('gulp');
+
+----------
+
+Image minifier plugin/module
+npm install gulp-imagemin@2.3.0 --save-dev
+
+----------
+
+gulp.src('src/img/**/*') // all the files from this input
+	.pipe(imagemin()) // will connect(pipe) with the imagemin 
+	.pipe(gulp.dest('src/img')) // and the result of imagemin will go out here
+
+/**/* = every file from every directory
+----------
+
+every code must be inside a task:
+gulp.task('taskname', function() {
+	// callback function code
+});
+
+npm run gulp taskname

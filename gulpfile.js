@@ -1,15 +1,8 @@
-const gulp = require('gulp');
+var gulp = require('gulp'),
+	imagemin = require('gulp-imagemin');
 
-const paths = {
-  dist: './dist/',
-  entry: './index.js',
-  src: [
-    'src/**/*.js'
-  ],
-};
-
-gulp.task('hello', function(){
-	console.log('Hello Gulp!');
+gulp.task('build-img', function() {
+	gulp.src('src/img/**/*')
+		.pipe(imagemin())
+		.pipe(gulp.dest('src/img'));
 });
-
-gulp.task('default', ['hello']);

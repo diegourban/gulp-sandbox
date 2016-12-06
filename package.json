@@ -1,22 +1,24 @@
 {
   "name": "gulp-sandbox",
   "version": "1.0.0",
-  "description": "gulp-sandbox",
+  "description": "",
   "main": "index.js",
-  "devDependencies": {
-    "gulp": "^3.9.1"
-  },
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "gulp": "gulp"
   },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/diegourban/gulp-sandbox.git"
   },
-  "author": "Diego Leonardo Urban",
+  "author": "",
   "license": "ISC",
   "bugs": {
     "url": "https://github.com/diegourban/gulp-sandbox/issues"
   },
-  "homepage": "https://github.com/diegourban/gulp-sandbox#readme"
+  "homepage": "https://github.com/diegourban/gulp-sandbox#readme",
+  "devDependencies": {
+    "gulp": "^3.9.0",
+    "gulp-imagemin": "^2.3.0"
+  }
 }
