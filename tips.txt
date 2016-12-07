@@ -36,7 +36,7 @@ gulp.src('src/img/**/*') // all the files from this input
 	.pipe(imagemin()) // will connect(pipe) with the imagemin 
 	.pipe(gulp.dest('src/img')) // and the result of imagemin will go out here
 
-/**/* = every file from every directory
+/**/* = every file from every directory (glob pattern)
 ----------
 
 every code must be inside a task:
@@ -45,3 +45,16 @@ gulp.task('taskname', function() {
 });
 
 npm run gulp taskname
+
+----------
+
+second parameter is the dependecies task to execute before
+gulp.task('taskname', ['task1', 'task2', ...], function() {
+
+});
+
+----------
+
+All tasks are async!!!
+
+If there is a chain of tasks, you must return the stream at the dependents to avoid async error.
