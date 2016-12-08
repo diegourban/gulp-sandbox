@@ -58,3 +58,16 @@ gulp.task('taskname', ['task1', 'task2', ...], function() {
 All tasks are async!!!
 
 If there is a chain of tasks, you must return the stream at the dependents to avoid async error.
+
+----------
+
+can be used as meta tags to replace codes from html
+<!-- build:js --> 
+	replace
+<!-- endbuild -->
+
+
+----------
+
+HTTP 1.X there is limit of concurrent requests for the same domain. So, other resources should wait.
+HTTP 2.X it is minimized with a single connection that will download many resources, it is called multiplexing
