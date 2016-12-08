@@ -7,4 +7,4 @@ Node.js
 `npm install`
 
 ## Usage
-`npm run gulp build-img`
+`npm run gulp`
