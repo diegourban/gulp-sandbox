@@ -91,3 +91,11 @@ gulp.task('server', function() {
 });
 Now we do not need to use baseDir anymore.
 When we run the server task, the browser will open automaticaly but the port will be added 1: http://localhost:3001
+
+----------
+
+autoprefixer plugin add css prefixes to all css properties
+The default is that it will support the last N versions
+To define another number os versions to support, add a file named browserslist at your project's root folder with the text: last X versions
+
+Replace X by the amount of versions you desire
