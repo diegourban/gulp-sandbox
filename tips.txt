@@ -71,3 +71,23 @@ can be used as meta tags to replace codes from html
 
 HTTP 1.X there is limit of concurrent requests for the same domain. So, other resources should wait.
 HTTP 2.X it is minimized with a single connection that will download many resources, it is called multiplexing
+
+
+----------
+
+browsersync is magic!
+It syncs all the connected clients on every event on the page. (liverealoading 1 to N)
+
+Using browsersync with other servers:
+gulp.task('server', function() {
+    browserSync.init({
+        server: {
+            proxy: "localhost:3000"
+        }
+    });
+
+    gulp.watch('src/**/*').on('change', browserSync.reload);
+
+});
+Now we do not need to use baseDir anymore.
+When we run the server task, the browser will open automaticaly but the port will be added 1: http://localhost:3001
