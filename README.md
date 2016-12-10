@@ -9,4 +9,4 @@ Node.js
 ## Usage
 `npm run gulp` to build the project
 
-`npm run gulp server` to start a Browsersync server and run watchers to lint js and css files
+`npm run gulp server` to start a Browsersync server, run watchers to pre-process less files and to lint js and css
