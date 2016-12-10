@@ -7,4 +7,6 @@ Node.js
 `npm install`
 
 ## Usage
-`npm run gulp`
+`npm run gulp` to build the project
+
+`npm run gulp server` to start a Browsersync server and run watchers to lint js and css files
